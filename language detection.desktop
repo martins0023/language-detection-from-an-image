@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=language detection
+Comment=Language Text Detection from an Image
+Exec=python3 gui.py
+Icon=clang
+Path=/home/xbase/Documents/covety_project_image_text_detection
+Terminal=true
+StartupNotify=false
