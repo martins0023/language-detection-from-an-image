@@ -52,12 +52,10 @@ class App(customtkinter.CTk):
         self.sidebar_frame.grid_rowconfigure(4, weight=1)
         self.logo_label = customtkinter.CTkLabel(self.sidebar_frame, text="Language Detection", font=customtkinter.CTkFont(size=20, weight="bold"))
         self.logo_label.grid(row=0, column=0, padx=20, pady=(20, 10))
-        #self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame, command=self.sidebar_button_event)
-        #self.sidebar_button_1.grid(row=1, column=0, padx=20, pady=10)
+        
         self.sidebar_button_2 = customtkinter.CTkButton(self.sidebar_frame, text="Get Started Now", command=self.startup)
         self.sidebar_button_2.grid(row=2, column=0, padx=20, pady=10)
-        #self.sidebar_button_3 = customtkinter.CTkButton(self.sidebar_frame, command=self.sidebar_button_event)
-        #self.sidebar_button_3.grid(row=3, column=0, padx=20, pady=10)
+        
         self.appearance_mode_label = customtkinter.CTkLabel(self.sidebar_frame, text="Appearance Mode:", anchor="w")
         self.appearance_mode_label.grid(row=5, column=0, padx=20, pady=(10, 0))
         self.appearance_mode_optionemenu = customtkinter.CTkOptionMenu(self.sidebar_frame, values=["Light", "Dark", "System"],
@@ -90,12 +88,7 @@ class App(customtkinter.CTk):
         self.tabview.tab("Help").grid_columnconfigure(0, weight=1)
         self.tabview.tab("About Student").grid_columnconfigure(0, weight=1)
 
-        #self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("CTkTabview"), dynamic_resizing=False,
-        #                                                values=["Value 1", "Value 2", "Value Long Long Long"])
-        #self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(20, 10))
-        #self.combobox_1 = customtkinter.CTkComboBox(self.tabview.tab("CTkTabview"),
-        #                                            values=["Value 1", "Value 2", "Value Long....."])
-        #self.combobox_1.grid(row=1, column=0, padx=20, pady=(10, 10))
+       
         self.string_input_button = customtkinter.CTkButton(self.tabview.tab("Detect Language"), text="Start detection",
                                                            command=self.open_input_dialog_event)
         self.string_input_button.grid(row=2, column=0, padx=20, pady=(10, 10))
@@ -106,7 +99,7 @@ class App(customtkinter.CTk):
 
         self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("Help"), text="Project structure: \n\nThe program gets the text \non the image given, process it with \npytesseract and some other modules \nwritten in the program to get \nthe language type, then \nto get the audio file output \nthe program makes a request\n to google to get \nsynthesis with module gtts. ")
         self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
-        self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("About Student"), text="NAME: Ogo-Oluwa Convenant Mobolaji \n\n MATRIC NO: HNDCOM000 \n DEPT: COMPUTER SCI \n SCHOOL: FCAH&PT \n SET: 2022/2023")
+        self.label_tab_2 = customtkinter.CTkLabel(self.tabview.tab("About Dev"), text="NAME: Martins Miracle ")
         self.label_tab_2.grid(row=0, column=0, padx=20, pady=20)
 
         # create display text for language detected
@@ -124,15 +117,11 @@ class App(customtkinter.CTk):
         self.slider_progressbar_frame.grid(row=1, column=1, columnspan=2, padx=(20, 0), pady=(20, 0), sticky="nsew")
         self.slider_progressbar_frame.grid_columnconfigure(0, weight=1)
         self.slider_progressbar_frame.grid_rowconfigure(4, weight=1)
-        #self.seg_button_1 = customtkinter.CTkSegmentedButton(self.slider_progressbar_frame)
-        #self.seg_button_1.grid(row=0, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
+        
         self.progressbar_1 = customtkinter.CTkProgressBar(self.slider_progressbar_frame)
         self.progressbar_1.grid(row=1, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
         self.progressbar_2 = customtkinter.CTkProgressBar(self.slider_progressbar_frame)
         self.progressbar_2.grid(row=2, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
-
-        #self.slider_1 = customtkinter.CTkSlider(self.slider_progressbar_frame, from_=0, to=1, number_of_steps=4)
-        #self.slider_1.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
         self.slider_1 = customtkinter.CTkLabel(self.slider_progressbar_frame, text=contents)
         self.slider_1.grid(row=3, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
@@ -141,23 +130,19 @@ class App(customtkinter.CTk):
         self.slider_2 = customtkinter.CTkButton(self.slider_progressbar_frame, text="Reload program", command=lambda:exit(self.restart()))
         self.slider_2.grid(row=4, column=0, padx=(20, 10), pady=(10, 10), sticky="ew")
 
-        #self.slider_2 = customtkinter.CTkButton(self.slider_progressbar_frame, orientation="vertical")
-        #self.slider_2.grid(row=0, column=1, rowspan=5, padx=(10, 10), pady=(10, 10), sticky="ns")
         self.progressbar_3 = customtkinter.CTkProgressBar(self.slider_progressbar_frame, orientation="vertical")
         self.progressbar_3.grid(row=0, column=2, rowspan=5, padx=(10, 20), pady=(10, 10), sticky="ns")
 
         # set default values
         self.appearance_mode_optionemenu.set("Dark")
         self.scaling_optionemenu.set("100%")
-        #self.optionmenu_1.set("CTkOptionmenu")
-        #self.combobox_1.set("CTkComboBox")
+       
         self.slider_1.configure()
-        #self.slider_2.configure(command=reset)
+       
         self.progressbar_1.configure(mode="indeterminnate")
         self.progressbar_1.start()
         self.textbox.insert("0.0", "project description\n\n" + "A language detection from an image using python3 and pytesseract.\n\nAIM: The aim of this project is to detect the type of language of text found in an image \n\nHow to run;\n*Place the image to be detected in the project folder directory and click 'get started now'." )
-        #self.seg_button_1.configure(values=["CTkSegmentedButton", "Value 2", "Value 3"])
-        #self.seg_button_1.set("Value 2")
+       
 
     def open_input_dialog_event(self):
         dialog = customtkinter.CTkInputDialog(text="Input your text:", title="Language Detection")
