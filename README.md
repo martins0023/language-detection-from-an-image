@@ -99,3 +99,12 @@ Given the complexity and variability of data in real world problems, it may take
 Example
 As a specific example of an epoch in reinforcement learning, let's consider traveling from point A to B in a city. Now, we can take multiple routes to reach B and the task is to drive from A to B a hundred times. Consider an epoch to be any route taken from a set of available routes. An iteration on the other hand describes the specifics of the route like which turns, how many stops, etc.  In the reinforcement learning terminology, an iteration is often called an action.
 
+## Images
+
+![project_interface](https://github.com/martins0023/language-detection-from-an-image/assets/69491293/601b7683-c436-4409-96dd-266faa3b449d)
+
+
+## shell 
+
+![shell_backgroung](https://github.com/martins0023/language-detection-from-an-image/assets/69491293/82eebce9-958d-4df8-963a-f8924b5d4f58)
+
